@@ -4,16 +4,18 @@ const sass = require('gulp-sass');
 const autoprefixer = require('autoprefixer');
 const browserSync = require('browser-sync').create();
 
-gulp.task('default', gulp.series(watch));
-
 //// Functions
 // Compile HTML
 function compileHTML() {
     return gulp
-        .src('src/**/*.pug')
+        .src('src/**/*.pug', 
+            {
+                base: 'src'
+            }
+        )
         .pipe(pug(
             {
-                pretty: true
+                pretty: true,
             }
         ))
         .pipe(gulp.dest('dist/'))
@@ -23,14 +25,19 @@ function compileHTML() {
 // Compile SASS/SCSS to CSS
 function compileSass() {
     return gulp
-        .src('src/sass/**/*.scss')
+        .src('./src/sass/**/*.scss')
         .pipe(sass(
             {
                 outputStyle: 'compressed'
             }
         ).on('error', sass.logError))
-        .pipe(autoprefixer('last 5 version', 'ie9'))
-        .pipe(gulp.dest('dist/css'))
+        // .pipe(autoprefixer(
+        //     {
+        //         browsers: ['last 5 versions'],
+        //         cascade: false
+        //     }
+        // ))
+        .pipe(gulp.dest('./dist/css/'))
         .pipe(browserSync.stream());
 }
 
@@ -38,13 +45,13 @@ function compileSass() {
 function watch() {
     browserSync.init({
         server: {
-            baseDir: './dist/pug/'
+            baseDir: './dist'
         }
     });
 
-    gulp.watch('./src/pug/**/*.pug', compileHTML);
-    gulp.watch('./src/pug/**/*.pug').on('change',browserSync.reload );
-    gulp.watch('.src/sass/**/*.scss', compileSass);
+    gulp.watch('./src/**/*.pug', compileHTML);
+    gulp.watch('./src/**/*.pug').on('change',browserSync.reload );
+    gulp.watch('./src/sass/**/*.scss', compileSass);
 }
 
 //// Exporting tasks
