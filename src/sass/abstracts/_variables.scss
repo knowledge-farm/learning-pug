@@ -1,1 +1,14 @@
-$background-color: linear-gradient(to right, #F8FFAE, #43C6AC)
+// Colors
+$main-color: #43C6AC;
+$secondary-color: #F8FFAE;
+$background-color: linear-gradient(to right, #F8FFAE, #43C6AC);
+
+$colors: (
+    youtube: #d16e8d,
+    twitter: #3f78c9 ,
+    github: #ffac83
+);
+
+// Text
+$title-font: 'Roboto', sans-serif;
+$generic-text-font: 'Lato', sans-serif;

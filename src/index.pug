@@ -2,5 +2,17 @@ doctype html
 html
     include includes/head.pug
     body
-        h1 This is a test page
-        
+        include includes/navbar.pug
+        .card
+            h1.card__title Trying out SCSS #[span.card__emphasis @each] Directive
+
+            p.card__text Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam voluptas error optio, ratione, officiis sed sequi quas modi, ab ea quos esse laborum veniam impedit incidunt autem neque saepe perferendis fugit quis! Ipsam officiis suscipit nostrum deserunt veniam aperiam incidunt!
+
+            ul.card__list
+                li.card__item
+                    a(href = '#').card__link.youtube Youtube
+                li.card__item
+                    a(href = '#').card__link.twitter Twitter
+                li.card__item
+                    a(href = '#').card__link.github GitHub
+        include includes/footer.pug
