@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link rel="stylesheet" href="css/main.css">
     <title>My Site</title>
   </head>
@@ -23,6 +24,40 @@
         <li class="card__item"><a class="card__link twitter" href="#">Twitter</a></li>
         <li class="card__item"><a class="card__link github" href="#">GitHub</a></li>
       </ul>
+    </div>
+    <div class="modal modal__box">
+      <div class="modal__body">
+        <label class="modal__label" for="email">E-mail</label>
+        <input class="modal__field" type="email" id="email" placeholder="Informe seu e-mail">
+        <label class="modal__label" for="password">Senha</label>
+        <input class="modal__field" type="password" id="password" placeholder="Informe sua senha"><a class="modal__btn" href="#">ENTRAR</a><span class="divisor"></span>
+        <div class="modal__social"><a class="modal__social__facebook" href="#"><i class="fab fa-facebook-f"></i><span>Entrar com Facebook</span></a><a class="modal__social__gmail" href="#"><i class="fab fa-google"></i><span>Entrar com Gmail</span></a></div>
+      </div>
+    </div>
+    <div class="modal modal__box">
+      <div class="modal__body">
+        <label class="modal__label" for="email">E-mail</label>
+        <input class="modal__field" type="email" id="email" placeholder="Informe seu e-mail">
+        <label class="modal__label" for="password">Senha</label>
+        <input class="modal__field" type="password" id="password" placeholder="Informe sua senha">
+        <label class="modal__label" for="estado">Informe seu estado</label>
+        <select class="modal__field" name="estados">
+          <option value="default">Selecione seu estado</option>
+          <option value="Rio Grande do Sul">Rio Grande do Sul</option>
+        </select>
+        <label class="modal__label" for="esportes">Esportes que tem interesse</label>
+        <select class="modal__field" name="esportes">
+          <option value="default">Selecione seu esporte</option>
+          <option value="Futebol">Futebol</option>
+          <option value="Volei">Volei</option>
+          <option value="Baseball">Baseball</option>
+        </select>
+        <div>
+          <label class="modal__label--checkbox" for="termos">Eu li aceito os termos de responsabilidade
+            <input class="modal__checkbox" type="checkbox" id="termos"><span class="icon"></span>
+          </label>
+        </div><a class="modal__btn" href="#">QUERO FAZER PARTE DESTE TIME!</a>
+      </div>
     </div>
     <footer class="footer">
       <p class="footer__text">Copyright 2019 - all rights reserved</p>

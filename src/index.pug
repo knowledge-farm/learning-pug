@@ -15,4 +15,52 @@ html
                     a(href = '#').card__link.twitter Twitter
                 li.card__item
                     a(href = '#').card__link.github GitHub
+        
+        .modal.modal__box
+            .modal__body
+                label(for="email").modal__label E-mail
+                input(type="email", id="email", placeholder="Informe seu e-mail").modal__field
+                label(for="password").modal__label Senha
+                input(type="password" id="password" placeholder="Informe sua senha").modal__field
+                a(href="#").modal__btn ENTRAR
+                span.divisor
+                .modal__social
+                    a(href="#").modal__social__facebook
+                        i.fab.fa-facebook-f
+                        span Entrar com Facebook
+
+                    a(href="#").modal__social__gmail
+                        i.fab.fa-google
+                        span Entrar com Gmail
+
+        .modal.modal__box
+            .modal__body
+                label(for="email").modal__label E-mail
+                input(type="email", id="email", placeholder="Informe seu e-mail").modal__field
+
+                label(for="password").modal__label Senha
+                input(type="password" id="password" placeholder="Informe sua senha").modal__field
+
+                label(for="estado").modal__label Informe seu estado
+                select(name="estados").modal__field
+                    option(value="default") Selecione seu estado
+                    option(value="Rio Grande do Sul") Rio Grande do Sul
+
+                label(for="esportes").modal__label Esportes que tem interesse
+                select(name="esportes").modal__field
+                    option(value="default") Selecione seu esporte
+                    option(value="Futebol") Futebol
+                    option(value="Volei") Volei
+                    option(value="Baseball") Baseball
+                div
+                    label(for="termos").modal__label--checkbox Eu li aceito os termos de responsabilidade
+                        input(type="checkbox" id="termos").modal__checkbox
+                        span.icon
+
+                a(href="#").modal__btn QUERO FAZER PARTE DESTE TIME!
+
+                
+
+
+
         include includes/footer.pug

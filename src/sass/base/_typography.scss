@@ -2,8 +2,10 @@
 
 $font-sizes: (
     h1: 2rem,
-    h2: 1.6rem,
-    p: 1rem
+    h2: 1.4rem,
+    h3: 1.2rem,
+    p: 1rem,
+    label: 1rem
 );
 
 @each $tag, $size in $font-sizes {

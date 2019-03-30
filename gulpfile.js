@@ -27,9 +27,9 @@ function compileSass() {
     return gulp
         .src('./src/sass/**/*.scss')
         .pipe(sass(
-            {
-                outputStyle: 'compressed'
-            }
+            // {
+            //     outputStyle: 'compressed'
+            // }
         ).on('error', sass.logError))
         // .pipe(autoprefixer(
         //     {
