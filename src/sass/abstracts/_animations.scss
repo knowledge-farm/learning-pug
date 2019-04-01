@@ -1,0 +1,11 @@
+@keyframes checkbox{
+    0%{
+        transform: scale(0);
+    }
+    70%{
+        transform: scale(1.4);
+    }
+    100%{
+        transform: scale(1);
+    }
+}

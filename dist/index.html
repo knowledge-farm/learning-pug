@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="css/main.css">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <title>My Site</title>
   </head>
   <body>
@@ -25,38 +27,68 @@
         <li class="card__item"><a class="card__link github" href="#">GitHub</a></li>
       </ul>
     </div>
-    <div class="modal modal__box">
-      <div class="modal__body">
-        <label class="modal__label" for="email">E-mail</label>
-        <input class="modal__field" type="email" id="email" placeholder="Informe seu e-mail">
-        <label class="modal__label" for="password">Senha</label>
-        <input class="modal__field" type="password" id="password" placeholder="Informe sua senha"><a class="modal__btn" href="#">ENTRAR</a><span class="divisor"></span>
-        <div class="modal__social"><a class="modal__social__facebook" href="#"><i class="fab fa-facebook-f"></i><span>Entrar com Facebook</span></a><a class="modal__social__gmail" href="#"><i class="fab fa-google"></i><span>Entrar com Gmail</span></a></div>
+    <div class="modals">
+      <div class="modals__body">
+        <label class="modals__label" for="email">E-mail</label>
+        <input class="modals__field" type="email" id="email" placeholder="Informe seu e-mail">
+        <label class="modals__label" for="password">Senha</label>
+        <input class="modals__field" type="password" id="password" placeholder="Informe sua senha"><a class="modals__btn" href="#">ENTRAR</a><span class="divisor"></span>
+        <div class="modals__social"><a class="modals__social__facebook" href="#"><i class="fab fa-facebook-f"></i><span>Entrar com Facebook</span></a><a class="modals__social__gmail" href="#"><i class="fab fa-google"></i><span>Entrar com Gmail</span></a></div><span class="divisor"></span>
+        <div class="modals__invite">                       
+          <p>Não é membro? <a class="modals__invite__link" href="#">Faça parte!</a></p>
+        </div>
       </div>
     </div>
-    <div class="modal modal__box">
-      <div class="modal__body">
-        <label class="modal__label" for="email">E-mail</label>
-        <input class="modal__field" type="email" id="email" placeholder="Informe seu e-mail">
-        <label class="modal__label" for="password">Senha</label>
-        <input class="modal__field" type="password" id="password" placeholder="Informe sua senha">
-        <label class="modal__label" for="estado">Informe seu estado</label>
-        <select class="modal__field" name="estados">
+    <div class="modals">
+      <div class="modals__body">
+        <label class="modals__label" for="email">E-mail</label>
+        <input class="modals__field" type="email" id="email" placeholder="Informe seu e-mail">
+        <label class="modals__label" for="password">Senha</label>
+        <input class="modals__field" type="password" id="password" placeholder="Informe sua senha">
+        <label class="modals__label" for="estado">Informe seu estado</label>
+        <select class="modals__field" name="estados">
           <option value="default">Selecione seu estado</option>
           <option value="Rio Grande do Sul">Rio Grande do Sul</option>
         </select>
-        <label class="modal__label" for="esportes">Esportes que tem interesse</label>
-        <select class="modal__field" name="esportes">
+        <label class="modals__label" for="esportes">Esportes que tem interesse</label>
+        <select class="modals__field" name="esportes">
           <option value="default">Selecione seu esporte</option>
           <option value="Futebol">Futebol</option>
           <option value="Volei">Volei</option>
           <option value="Baseball">Baseball</option>
         </select>
         <div>
-          <label class="modal__label--checkbox" for="termos">Eu li aceito os termos de responsabilidade
-            <input class="modal__checkbox" type="checkbox" id="termos"><span class="icon"></span>
+          <label class="modals__label--checkbox" for="termos">
+            <input class="modals__checkbox" type="checkbox" id="termos"><span class="modals__checkbox-text">Eu li aceito os termos de responsabilidade</span>
           </label>
-        </div><a class="modal__btn" href="#">QUERO FAZER PARTE DESTE TIME!</a>
+        </div><a class="modals__btn" href="#">QUERO FAZER PARTE DESTE TIME!</a>
+      </div>
+    </div>
+    <div class="modals modals--contact">
+      <div class="modals__body container">
+        <div class="modals__header">
+          <h1 class="modals__header__title">Alguma coisa muito legal?</h1><span class="modals__header__sub">Tem alguma idéia?</span><span class="modals__header__sub">Alguma crítica?</span><span class="modals__header__sub">Queremos saber!</span>
+        </div>
+        <div class="modals__fields-box">
+          <div class="row">
+            <div class="col-md-5">
+              <div class="form-group">
+                <label class="modals__label" for="nome">Nome</label>
+                <input class="modals__field" type="text" id="email" placeholder="Informe seu nome">
+              </div>
+              <div class="form-group">                               
+                <label class="modals__label" for="email">E-mail</label>
+                <input class="modals__field" type="email" id="email" placeholder="Informe seu e-mail">
+              </div>
+            </div>
+            <div class="col-md-7">
+              <div class="form-group">
+                <label class="modals__label" for="message">Mensagem</label>
+                <textarea class="modals__textarea" name="message" cols="40" rows="10" placeholder="Mensagem"></textarea>
+              </div>
+            </div>
+          </div>
+        </div><a class="modals__btn" href="#">Enviar</a>
       </div>
     </div>
     <footer class="footer">

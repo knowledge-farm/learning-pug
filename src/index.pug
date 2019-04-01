@@ -16,50 +16,77 @@ html
                 li.card__item
                     a(href = '#').card__link.github GitHub
         
-        .modal.modal__box
-            .modal__body
-                label(for="email").modal__label E-mail
-                input(type="email", id="email", placeholder="Informe seu e-mail").modal__field
-                label(for="password").modal__label Senha
-                input(type="password" id="password" placeholder="Informe sua senha").modal__field
-                a(href="#").modal__btn ENTRAR
+        .modals
+            .modals__body
+                label(for="email").modals__label E-mail
+                input(type="email", id="email", placeholder="Informe seu e-mail").modals__field
+                label(for="password").modals__label Senha
+                input(type="password" id="password" placeholder="Informe sua senha").modals__field
+                a(href="#").modals__btn ENTRAR
                 span.divisor
-                .modal__social
-                    a(href="#").modal__social__facebook
+                .modals__social
+                    a(href="#").modals__social__facebook
                         i.fab.fa-facebook-f
                         span Entrar com Facebook
 
-                    a(href="#").modal__social__gmail
+                    a(href="#").modals__social__gmail
                         i.fab.fa-google
                         span Entrar com Gmail
+                span.divisor
+                .modals__invite                        
+                    p Não é membro? 
+                        a(href="#").modals__invite__link Faça parte!
 
-        .modal.modal__box
-            .modal__body
-                label(for="email").modal__label E-mail
-                input(type="email", id="email", placeholder="Informe seu e-mail").modal__field
+        .modals
+            .modals__body
+                label(for="email").modals__label E-mail
+                input(type="email", id="email", placeholder="Informe seu e-mail").modals__field
 
-                label(for="password").modal__label Senha
-                input(type="password" id="password" placeholder="Informe sua senha").modal__field
+                label(for="password").modals__label Senha
+                input(type="password" id="password" placeholder="Informe sua senha").modals__field
 
-                label(for="estado").modal__label Informe seu estado
-                select(name="estados").modal__field
+                label(for="estado").modals__label Informe seu estado
+                select(name="estados").modals__field
                     option(value="default") Selecione seu estado
                     option(value="Rio Grande do Sul") Rio Grande do Sul
 
-                label(for="esportes").modal__label Esportes que tem interesse
-                select(name="esportes").modal__field
+                label(for="esportes").modals__label Esportes que tem interesse
+                select(name="esportes").modals__field
                     option(value="default") Selecione seu esporte
                     option(value="Futebol") Futebol
                     option(value="Volei") Volei
                     option(value="Baseball") Baseball
                 div
-                    label(for="termos").modal__label--checkbox Eu li aceito os termos de responsabilidade
-                        input(type="checkbox" id="termos").modal__checkbox
-                        span.icon
+                    label(for="termos").modals__label--checkbox
+                        input(type="checkbox" id="termos").modals__checkbox
+                        span.modals__checkbox-text Eu li aceito os termos de responsabilidade
 
-                a(href="#").modal__btn QUERO FAZER PARTE DESTE TIME!
+                a(href="#").modals__btn QUERO FAZER PARTE DESTE TIME!
 
+        .modals.modals--contact
+            .modals__body.container
+                .modals__header
+                    h1.modals__header__title Alguma coisa muito legal?
+                    span.modals__header__sub Tem alguma idéia?
+                    span.modals__header__sub Alguma crítica?
+                    span.modals__header__sub Queremos saber!
+                    
+                .modals__fields-box
+                    .row
+                        .col-md-5
+                            .form-group
+                                label(for="nome").modals__label Nome
+                                input(type="text", id="email", placeholder="Informe seu nome").modals__field
+                            .form-group                                
+                                label(for="email").modals__label E-mail
+                                input(type="email", id="email", placeholder="Informe seu e-mail").modals__field
+                        .col-md-7
+                            .form-group
+                                label(for="message").modals__label Mensagem
+                                textarea(name="message", cols="40", rows="10" placeholder="Mensagem").modals__textarea
                 
+                a(href="#").modals__btn Enviar
+
 
 
 
